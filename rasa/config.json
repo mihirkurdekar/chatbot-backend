@@ -1,0 +1,7 @@
+{
+  "language": "en",
+  "pipeline": "tensorflow_embedding",
+  "fixed_model_name": "rasamodel",
+  "path": "./projects",
+  "cors_origin": "[*]"
+}

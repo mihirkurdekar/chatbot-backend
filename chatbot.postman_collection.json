@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "1bcf54b8-a4c7-4b75-975b-040e46ce0e2c",
+		"name": "chatbot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/New Chapter/test.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/chatbot/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chatbot",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Train",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n    {\r\n        \"question\": \"Hello test1\",\r\n        \"answer\": \"Hi test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    },\r\n     {\r\n        \"question\": \"Hi test1\",\r\n        \"answer\": \"Hello test1\",\r\n        \"intent\": \"greeting\",\r\n        \"entities\": [\"test1\"]\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/chatbot/train",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chatbot",
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/chatbot/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chatbot",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get answer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/chatbot/execute?question=\"hi test1\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chatbot",
+						"execute"
+					],
+					"query": [
+						{
+							"key": "question",
+							"value": "\"hi test1\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rasa get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/parse?model=default&project=default&q=hi test1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"parse"
+					],
+					"query": [
+						{
+							"key": "model",
+							"value": "default"
+						},
+						{
+							"key": "project",
+							"value": "default"
+						},
+						{
+							"key": "q",
+							"value": "hi test1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

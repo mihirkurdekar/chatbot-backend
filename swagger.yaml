@@ -1,0 +1,78 @@
+swagger: "2.0"
+info:
+  version: "0.0.0"
+  title: "Chat bot"
+host: "localhost"
+basePath: "/v2"
+schemes:
+- "http"
+paths:
+  /train:
+    put:
+      summary: "add training data"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Training data"
+        required: true
+        schema:
+          $ref: "#/definitions/TrainingData"
+      responses:
+        201:
+          description: "Trained"
+        400:
+          description: "Invalid input"
+  /execute:
+    get:
+      summary: "get answer"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+       - in: "query"
+         name: "question"
+         description: "Question"
+         required: true
+         type: "string"
+      responses:
+        200:
+          description: "Answer"
+          schema:
+            $ref: "#/definitions/AnswerObject"
+        400:
+          description: "Invalid input"
+      
+definitions:
+  AnswerObject:
+    type: "object"
+    required:
+    - "answer"
+    properties:
+      answer:
+        type: "string"
+  TrainingData:
+    type: "array"
+    items:
+      type: "object"
+      required:
+      - "question"
+      - "answer"
+      - "intents"
+      properties:
+        question:
+          type: "string"
+        answer:
+          type: "string"
+        intent:
+          type: "string"
+        entities:
+          type: "array"
+          items:
+            type: "string"
+      
+  

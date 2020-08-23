@@ -1,0 +1,7 @@
+wheel
+Django
+djangorestframework
+spacy
+tensorflow
+rasa_nlu==0.13.8
+sklearn_crfsuite

@@ -1,0 +1,69 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hello test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi test1"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}
