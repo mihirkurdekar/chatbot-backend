@@ -1,5 +1,6 @@
 venv
-rasa/project/*
-*/__pycache__/*
+rasa/project/
+*/__pycache__/
 db.sqlite3
 .idea
+.vscode
