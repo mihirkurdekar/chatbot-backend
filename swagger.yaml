@@ -3,7 +3,7 @@ info:
   version: "0.0.0"
   title: "Chat bot"
 host: "localhost"
-basePath: "/v2"
+basePath: "/chatbot"
 schemes:
 - "http"
 paths:
